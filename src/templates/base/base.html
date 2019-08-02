@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    {% include "base/head_css.html" %}
+    <!--link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"-->
+    <title>
+      {% block title %}
+
+      {% endblock title %}
+    </title>
+  </head>
+  <body>
+    {% include "base/navbar.html" %}
+    <div class="container">
+<!--
+      {% block header %}
+        <h1>Este es el bloque de header base</h1>
+      {% endblock header %} -->
+      {% block content %}
+        <h3>Contenido del archivo base</h3>
+      {% endblock content %}
+    </div>
+
+    {% block footer %}
+      <h5>Soy el footer de base</h5>
+    {% endblock footer %}
+    {% include "base/javascript.html" %}
+  </body>
+</html>
