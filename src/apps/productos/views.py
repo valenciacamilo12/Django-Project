@@ -9,7 +9,7 @@ class ProductCreate(CreateView):
     model = Producto
     form_class = ProductoForm
     template_name = 'producto/producto_form.html'
-    success_url = reverse_lazy('producto:producto_listar')
+    success_url = reverse_lazy('producto:producto_list')
 
 
 
@@ -17,14 +17,14 @@ class ProductoUpdate(UpdateView):
     model = Producto
     form_class = ProductoForm
     template_name = 'producto/producto_form.html'
-    success_url = reverse_lazy('producto:producto_listar')
+    success_url = reverse_lazy('producto:producto_list')
 
 
 class ProductoDelete(DeleteView):
     model = Producto
     form_class = ProductoForm
     template_name = 'producto/producto_delete.html'
-    success_url = reverse_lazy('producto:producto_listar')
+    success_url = reverse_lazy('producto:producto_list')
 
 
 class ProductoList(ListView):

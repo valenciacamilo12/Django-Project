@@ -1,0 +1,43 @@
+{% extends "base/base.html" %}
+{%block content%}
+    <table class="table table-border">
+        <thead>
+            <tr>
+                <td> Codigo Producto</td>
+                <td> Nombre</td>
+                <td> Dimensiones</td>
+                <td> Proveedor</td>
+                <td> Descripcion</td>
+                <td> Cantidad Stock</td>
+                <td> Precio Venta</td>
+                <td> Precio Proveedor</td>
+                <td> Gama Producto</td>
+            </tr>
+        </thead>
+        <tbody>
+            {%if object_list %}
+                {% for producto in object_list %}
+                    <tr>
+                        <td>{{producto.codigo_producto}}</td>
+                        <td>{{producto.nombre}}</td>
+                        <td>{{producto.dimensiones}}</td>
+                        <td>{{producto.proveedor}}</td>
+                        <td>{{producto.descripcion}}</td>
+                        <td>{{producto.cantidad_stock}}</td>
+                        <td>{{producto.precio_venta}}</td>
+                        <td>{{producto.precio_proveedor}}</td>
+                        <td>{{producto.gama_producto}}</td>
+
+                        <td>
+                            <a class="btn btn-primary" href="{% url 'producto:producto_editar' producto.codigo_producto%}">Editar</a>
+                            <a class="btn btn-danger" href="{% url 'producto:producto_eliminar' producto.codigo_producto%}">Eliminar</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            {%else %}
+                <h1>No hay registro de productos</h1>
+            {%endif %}
+        </tbody>
+    </table>
+
+{% endblock content%}
