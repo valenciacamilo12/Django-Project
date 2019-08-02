@@ -12,8 +12,8 @@ class Cliente(models.Model):
     ciudad = models.CharField(max_length=30)
     region = models.CharField(max_length=30)
     pais = models.CharField(max_length=30)
-    codigo_postal = models.CharField(max_length=30,default=True)
-    limite_credito = models.CharField(max_length=30,default=True)
+    codigo_postal = models.CharField(max_length=30, default=True)
+    limite_credito = models.CharField(max_length=30, default=True)
 
     def __str__(self):
         return '{}'.format(self.nombre_cliente)
