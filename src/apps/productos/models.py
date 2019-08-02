@@ -14,7 +14,6 @@ class GamaProductos(models.Model):
 class Producto(models.Model):
     codigo_producto = models.IntegerField(primary_key=True,unique=True)
     nombre = models.CharField(max_length=30)
-    gama = models.CharField(max_length=30)
     dimensiones = models.CharField(max_length=30)
     proveedor = models.CharField(max_length=30)
     descripcion = models.CharField(max_length=50)
