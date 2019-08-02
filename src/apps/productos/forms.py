@@ -1,5 +1,5 @@
 from django import forms
-from apps.productos.models import Producto
+from apps.productos.models import Producto,GamaProductos
 
 class ProductoForm(forms.ModelForm):
     class Meta:
@@ -43,3 +43,25 @@ class ProductoForm(forms.ModelForm):
             'gama_producto': forms.Select(attrs = {'class':'form-control'}),
         }
 
+class GamaProductoForm(forms.ModelForm):
+    class Meta:
+        model = GamaProductos
+
+        fields = [
+            'gama',
+            'descripcion_texto',
+            'descripcion_html',
+        ]
+
+
+        labels = {
+            'gama':'Gama',
+            'descripcion_texto':'Descripcion Texto',
+            'descripcion_html':'Descripcion Html',
+        }
+
+        widgets = {
+            'gama': forms.TextInput(attrs = {'class':'forms-control'}),
+            'descripcion_texto': forms.TextInput(attrs = {'class':'form-control'}),
+            'descripcion_html': forms.TextInput(attrs = {'class':'form-control'}),
+        }
