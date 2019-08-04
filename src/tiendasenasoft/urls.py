@@ -24,6 +24,7 @@ from django.contrib.auth import views as auth_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^productos/', include('apps.productos.urls', namespace='productos')),
+    url(r'^oficinas/', include('apps.oficinas.urls', namespace='oficinas')),
     url(r'^login/$', auth_views.login, name='login'),
     url(r'^logout/$', auth_views.logout, name='logout'),
 ]

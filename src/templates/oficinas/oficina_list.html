@@ -1,0 +1,41 @@
+{% extends "base/base.html" %}
+{% block content%}
+    <table class="table table-border">
+        <thead>
+            <tr>
+                <th scope='col'> Codigo Oficina</th>
+                <th scope='col'> Ciudad</th>
+                <th scope='col'> Pais</th>
+                <th scope='col'> Region</th>
+                <th scope='col'> Codigo Postal</th>
+                <th scope='col'> Telefono</th>
+                <th scope='col'> Linea Direccion 1</th>
+                <th scope='col'> Linea Direccion 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%if object_list %}
+                {% for oficina in object_list %}
+                    <tr>
+                        <th scope='row'>{{oficina.codigo_oficina}}</th>
+                        <td>{{oficina.ciudad}}</td>
+                        <td>{{oficina.pais}}</td>
+                        <td>{{oficina.region}}</td>
+                        <td>{{oficina.codigo_postal}}</td>
+                        <td>{{oficina.telefono}}</td>
+                        <td>{{oficina.linea_direccion1}}</td>
+                        <td>{{oficina.linea_direccion2}}</td>
+                        <td>
+                            <a class="btn btn-success" href="{% url 'oficinas:oficina_crear' %}">Nuevo</a>
+                            <a class="btn btn-primary" href="{% url 'oficinas:oficina_editar' oficina.codigo_oficina %}">Editar</a>
+                            <a class="btn btn-danger" href="{% url 'oficinas:oficina_eliminar' oficina.codigo_oficina %}">Eliminar</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            {%else %}
+                <h1>No hay registro de oficinas</h1>
+            {%endif %}
+        </tbody>
+    </table>
+
+{% endblock content%}
