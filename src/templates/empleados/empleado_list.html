@@ -1,0 +1,45 @@
+{% extends "base/base.html" %}
+{% block content%}
+    <table class="table table-border">
+        <thead>
+            <tr>
+                <th scope='col'> Codigo Empleado</th>
+                <th scope='col'> Nombre</th>
+                <th scope='col'> Apellido 1</th>
+                <th scope='col'> Apellido 2</th>
+                <th scope='col'> Extencion</th>
+                <th scope='col'> Email</th>
+                <th scope='col'> Codigo Oficina</th>
+                <th scope='col'> Codigo Jefe</th>
+                <th scope='col'> Puesto</th>
+                <th scope='col'> Oficina</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%if object_list %}
+                {% for empleado in object_list %}
+                    <tr>
+                        <th scope='row'>{{empleado.codigo_empleado}}</th>
+                        <td>{{empleado.nombre}}</td>
+                        <td>{{empleado.apellido1}}</td>
+                        <td>{{empleado.apellido2}}</td>
+                        <td>{{empleado.extencion}}</td>
+                        <td>{{empleado.email}}</td>
+                        <td>{{empleado.codigo_oficina}}</td>
+                        <td>{{empleado.codigo_jefe}}</td>
+                        <td>{{empleado.puesto}}</td>
+                        <td>{{empleado.oficina}}</td>
+                        <td>
+                            <a class="btn btn-success" href="{% url 'empleados:empleado_crear' %}">Nuevo</a>
+                            <a class="btn btn-primary" href="{% url 'empleados:empleado_editar' empleado.codigo_empleado %}">Editar</a>
+                            <a class="btn btn-danger" href="{% url 'empleados:empleado_eliminar' empleado.codigo_empleado %}">Eliminar</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            {%else %}
+                <h1>No hay registro de empleados</h1>
+            {%endif %}
+        </tbody>
+    </table>
+
+{% endblock content%}

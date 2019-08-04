@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b656d381-3c83-4efa-9b98-21d190d6e510" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/apps/oficinas/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/apps/empleados/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/apps/empleados/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/clientes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/clientes/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/empleados/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/empleados/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/empleados/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/empleados/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/apps/oficinas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/oficinas/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/apps/productos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/productos/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tiendasenasoft/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tiendasenasoft/urls.py" afterDir="false" />
@@ -22,26 +26,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/templates/oficinas/oficina_list.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/templates/empleados/empleado_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="28" column="106" selection-start-line="28" selection-start-column="106" selection-end-line="28" selection-end-column="106" />
+            <state relative-caret-position="158">
+              <caret line="33" column="80" lean-forward="true" selection-start-line="33" selection-start-column="80" selection-end-line="33" selection-end-column="80" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/templates/oficinas/oficina_delete.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="60" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/templates/oficinas/oficina_form.html">
+        <entry file="file://$PROJECT_DIR$/src/templates/empleados/empleado_form.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
               <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
@@ -50,22 +45,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apps/oficinas/views.py">
+        <entry file="file://$PROJECT_DIR$/src/templates/empleados/empleado_delete.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="29" column="48" lean-forward="true" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="51">
+              <caret line="3" column="66" selection-start-line="3" selection-start-column="66" selection-end-line="3" selection-end-column="66" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apps/oficinas/urls.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/apps/empleados/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="83" selection-start-line="6" selection-start-column="69" selection-end-line="6" selection-end-column="83" />
+            <state relative-caret-position="136">
+              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -74,24 +66,36 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tiendasenasoft/urls.py">
+        <entry file="file://$PROJECT_DIR$/src/apps/empleados/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+            <state relative-caret-position="80">
+              <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
               <folding>
-                <element signature="e#638#670#0" expanded="true" />
+                <element signature="e#0#35#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/apps/oficinas/forms.py">
+        <entry file="file://$PROJECT_DIR$/src/apps/empleados/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="238">
+              <caret line="14" column="11" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="11" />
               <folding>
-                <element signature="e#0#24#0" expanded="true" />
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tiendasenasoft/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="181">
+              <caret line="27" column="77" selection-start-line="27" selection-start-column="77" selection-end-line="27" selection-end-column="77" />
+              <folding>
+                <element signature="e#638#670#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -114,8 +118,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/apps/oficinas/models.py" />
-        <option value="$PROJECT_DIR$/src/apps/empleados/models.py" />
-        <option value="$PROJECT_DIR$/src/apps/clientes/models.py" />
         <option value="$PROJECT_DIR$/src/apps/productos/gamaproductos_forms.py" />
         <option value="$PROJECT_DIR$/src/apps/productos/models.py" />
         <option value="$PROJECT_DIR$/src/templates/producto/producto_form.html" />
@@ -132,10 +134,17 @@
         <option value="$PROJECT_DIR$/src/templates/producto/gamaproducto_delete.html" />
         <option value="$PROJECT_DIR$/src/apps/oficinas/forms.py" />
         <option value="$PROJECT_DIR$/src/templates/oficinas/producto_delete.html" />
-        <option value="$PROJECT_DIR$/src/tiendasenasoft/urls.py" />
         <option value="$PROJECT_DIR$/src/apps/oficinas/urls.py" />
         <option value="$PROJECT_DIR$/src/apps/oficinas/views.py" />
         <option value="$PROJECT_DIR$/src/templates/oficinas/oficina_list.html" />
+        <option value="$PROJECT_DIR$/src/apps/clientes/models.py" />
+        <option value="$PROJECT_DIR$/src/apps/empleados/models.py" />
+        <option value="$PROJECT_DIR$/src/apps/empleados/forms.py" />
+        <option value="$PROJECT_DIR$/src/tiendasenasoft/urls.py" />
+        <option value="$PROJECT_DIR$/src/templates/empleados/empleado_delete.html" />
+        <option value="$PROJECT_DIR$/src/apps/empleados/views.py" />
+        <option value="$PROJECT_DIR$/src/templates/empleados/empleado_list.html" />
+        <option value="$PROJECT_DIR$/src/apps/empleados/urls.py" />
       </list>
     </option>
   </component>
@@ -175,7 +184,7 @@
               <item name="tiendasenasoft" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="oficinas" type="462c0819:PsiDirectoryNode" />
+              <item name="empleados" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tiendasenasoft" type="b2602c69:ProjectViewProjectNode" />
@@ -188,21 +197,7 @@
               <item name="tiendasenasoft" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tiendasenasoft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tiendasenasoft" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="oficinas" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tiendasenasoft" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tiendasenasoft" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="producto" type="462c0819:PsiDirectoryNode" />
+              <item name="empleados" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tiendasenasoft" type="b2602c69:ProjectViewProjectNode" />
@@ -262,12 +257,12 @@
       <workItem from="1564767138749" duration="422000" />
       <workItem from="1564798867665" duration="4970000" />
       <workItem from="1564863993265" duration="13452000" />
-      <workItem from="1564880582483" duration="3031000" />
+      <workItem from="1564880582483" duration="6718000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51379000" />
+    <option name="totallyTimeSpent" value="55066000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -323,24 +318,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/apps/empleados/admin.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/empleados/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/empleados/migrations/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/empleados/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/clientes/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/clientes/admin.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/apps/clientes/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -356,27 +333,10 @@
     <entry file="file://$PROJECT_DIR$/src/apps/productos/migrations/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/empleados/views.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/clientes/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/apps/empleados/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="28" selection-start-column="28" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -403,9 +363,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/templates/index.html" />
-    <entry file="file://$PROJECT_DIR$/src/apps/clientes/views.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/tiendasenasoft/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -423,13 +380,6 @@
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tiendasenasoft/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
         </state>
       </provider>
     </entry>
@@ -582,16 +532,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tiendasenasoft/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-          <folding>
-            <element signature="e#638#670#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/apps/oficinas/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
@@ -616,6 +556,104 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="28" column="106" selection-start-line="28" selection-start-column="106" selection-end-line="28" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apps/clientes/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apps/clientes/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apps/empleados/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apps/empleados/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tiendasenasoft/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apps/empleados/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apps/empleados/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="17" column="44" lean-forward="true" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/empleados/empleado_delete.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="66" selection-start-line="3" selection-start-column="66" selection-end-line="3" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/empleados/empleado_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tiendasenasoft/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="27" column="77" selection-start-line="27" selection-start-column="77" selection-end-line="27" selection-end-column="77" />
+          <folding>
+            <element signature="e#638#670#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templates/empleados/empleado_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="33" column="80" lean-forward="true" selection-start-line="33" selection-start-column="80" selection-end-line="33" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/apps/empleados/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -7,24 +7,24 @@ from apps.oficinas.forms import OficinaForm
 class OficinaCreate(CreateView):
     model = Oficinas
     form_class = OficinaForm
-    template_name = 'oficinas/oficina_form.html'
+    template_name = 'oficinas/empleado_form.html'
     success_url = reverse_lazy('oficinas:oficina_listar')
 
 
 class OficinaUpdate(UpdateView):
     model = Oficinas
     form_class = OficinaForm
-    template_name = 'oficinas/oficina_form.html'
+    template_name = 'oficinas/empleado_form.html'
     success_url = reverse_lazy('oficinas:oficina_listar')
 
 
 class OficinaDelete(DeleteView):
     model = Oficinas
     form_class = OficinaForm
-    template_name = 'oficinas/oficina_delete.html'
+    template_name = 'oficinas/empleado_delete.html'
     success_url = reverse_lazy('oficinas:oficina_listar')
 
 
 class OficinaList(ListView):
     model = Oficinas
-    template_name = 'oficinas/oficina_list.html'
+    template_name = 'oficinas/empleado_list.html'
