@@ -15,7 +15,7 @@ class Cliente(models.Model):
     pais = models.CharField(max_length=30)
     codigo_postal = models.CharField(max_length=30, default=True)
     limite_credito = models.CharField(max_length=30, default=True)
-    cliente = models.ForeignKey(Empleado, on_delete=models.CASCADE, null=True, blank=True)
+    empleado = models.ForeignKey(Empleado, on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return '{}'.format(self.nombre_cliente)

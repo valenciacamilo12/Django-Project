@@ -1,0 +1,53 @@
+{% extends "base/base.html" %}
+{% block content%}
+    <table class="table table-border">
+        <thead>
+            <tr>
+                <th scope='col'> Codigo Cliente</th>
+                <th scope='col'> Nombre Cliente</th>
+                <th scope='col'> Nombre Contacto</th>
+                <th scope='col'> Apellido Contacto</th>
+                <th scope='col'> Telefono</th>
+                <th scope='col'> Fax</th>
+                <th scope='col'> Linea Direccion 1</th>
+                <th scope='col'> Linea Direccion 2</th>
+                <th scope='col'> Ciudad</th>
+                <th scope='col'> Region</th>
+                <th scope='col'> Pais</th>
+                <th scope='col'> Codigo Postal</th>
+                <th scope='col'> Limite Credito</th>
+                <th scope='col'> Empleado</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%if object_list %}
+                {% for cliente in object_list %}
+                    <tr>
+                        <th scope='row'>{{cliente.codigo_cliente}}</th>
+                        <td>{{cliente.nombre_cliente}}</td>
+                        <td>{{cliente.nombre_contacto}}</td>
+                        <td>{{cliente.apellido_contacto}}</td>
+                        <td>{{cliente.telefono}}</td>
+                        <td>{{cliente.fax}}</td>
+                        <td>{{cliente.linea_direccion1}}</td>
+                        <td>{{cliente.linea_direccion2}}</td>
+                        <td>{{cliente.ciudad}}</td>
+                        <td>{{cliente.region}}</td>
+                        <td>{{cliente.pais}}</td>
+                        <td>{{cliente.codigo_postal}}</td>
+                        <td>{{cliente.limite_credito}}</td>
+                        <td>{{cliente.empleado}}</td>
+                        <td>
+                            <a class="btn btn-success" href="{% url 'clientes:cliente_crear' %}">Nuevo</a>
+                            <a class="btn btn-primary" href="{% url 'clientes:cliente_editar' cliente.codigo_cliente %}">Editar</a>
+                            <a class="btn btn-danger" href="{% url 'clientes:cliente_eliminar' cliente.codigo_cliente %}">Eliminar</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            {%else %}
+                <h1>No hay registro de clientes</h1>
+            {%endif %}
+        </tbody>
+    </table>
+
+{% endblock content%}
