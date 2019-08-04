@@ -5,11 +5,11 @@ from apps.productos.models import Producto,GamaProductos
 from apps.productos.forms import ProductoForm,GamaProductoForm
 
 
-class ProductCreate(CreateView):
+class ProductoCreate(CreateView):
     model = Producto
     form_class = ProductoForm
     template_name = 'producto/producto_form.html'
-    success_url = reverse_lazy('producto:producto_list')
+    success_url = reverse_lazy('productos:producto_listar')
 
 
 
@@ -17,14 +17,14 @@ class ProductoUpdate(UpdateView):
     model = Producto
     form_class = ProductoForm
     template_name = 'producto/producto_form.html'
-    success_url = reverse_lazy('producto:producto_list')
+    success_url = reverse_lazy('productos:producto_listar')
 
 
 class ProductoDelete(DeleteView):
     model = Producto
     form_class = ProductoForm
     template_name = 'producto/producto_delete.html'
-    success_url = reverse_lazy('producto:producto_list')
+    success_url = reverse_lazy('productos:producto_listar')
 
 
 class ProductoList(ListView):
@@ -38,7 +38,7 @@ class GamaProductoCreate(CreateView):
     model = GamaProductos
     form_class = GamaProductoForm
     template_name = 'producto/gamaproducto_form.html'
-    success_url = reverse_lazy('producto:gamaproducto_listar')
+    success_url = reverse_lazy('productos:productogama_listar')
 
 
 
@@ -46,14 +46,14 @@ class GamaProductoUpdate(UpdateView):
     model = GamaProductos
     form_class = GamaProductoForm
     template_name = 'producto/gamaproducto_form.html'
-    success_url = reverse_lazy('producto:gamaproducto_listar')
+    success_url = reverse_lazy('productos:productogama_listar')
 
 
 class GamaProductoDelete(DeleteView):
     model = GamaProductos
     form_class = GamaProductoForm
     template_name = 'producto/gamaproducto_delete.html'
-    success_url = reverse_lazy('producto:gamaproducto_listar')
+    success_url = reverse_lazy('productos:productogama_listar')
 
 
 

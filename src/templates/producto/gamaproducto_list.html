@@ -1,4 +1,5 @@
 {% extends "base/base.html" %}
+
 {%block content%}
     <table class="table table-border">
         <thead>
@@ -16,8 +17,8 @@
                         <td>{{gamaproducto.descripcion_texto}}</td>
                         <td>{{gamaproducto.descripcion_html}}</td>
                         <td>
-                            <a class="btn btn-primary" href="{% url 'producto:productogama_editar' gamaproducto.gama%}">Editar</a>
-                            <a class="btn btn-danger" href="{% url 'producto:productogama_eliminar' gamaproducto.gama%}">Eliminar</a>
+                            <a class="btn btn-primary" href="{% url 'productos:productogama_editar' gamaproducto.gama%}">Editar</a>
+                            <a class="btn btn-danger" href="{% url 'productos:productogama_eliminar' gamaproducto.gama%}">Eliminar</a>
                         </td>
                     </tr>
                 {% endfor %}

@@ -35,7 +35,7 @@ class ProductoForm(forms.ModelForm):
             'codigo_producto': forms.TextInput(attrs = {'class':'forms-control'}),
             'nombre': forms.TextInput(attrs = {'class':'form-control'}),
             'dimensiones': forms.TextInput(attrs = {'class':'form-control'}),
-            'proveedor': forms.TextInput(atttrs = {'class':'form-control'}),
+            'proveedor': forms.TextInput(attrs = {'class':'form-control'}),
             'descripcion': forms.TextInput(attrs = {'class':'form-control'}),
             'cantidad_stock': forms.TextInput(attrs = {'class':'form-control'}),
             'precio_venta': forms.TextInput(attrs = {'class':'form-control'}),
