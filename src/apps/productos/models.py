@@ -1,5 +1,6 @@
 from django.db import models
 from apps.clientes.models import Cliente
+from django.utils.translation import ugettext as _
 
 
 class GamaProductos(models.Model):
@@ -24,6 +25,12 @@ class Producto(models.Model):
 
     def __str__(self):
         return '{}'.format(self.nombre)
+
+    class Meta:
+        permissions = {
+            ('is_uno', _('Usuario Uno')),
+            ('is_dos', _('Usuario Dos')),
+        }
 
 
 

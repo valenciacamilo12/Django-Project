@@ -40,5 +40,16 @@
             {%endif %}
         </tbody>
     </table>
+    <ul class = "pager">
+    {%if page_obj.has_previous %}
+      <a class="btn btn-success" href="?page={{page_obj.previous_page_number}}">Previo</a>
+    {%endif%}
+    </ul>
+
+    <ul class = "pager">
+        {%if page_obj.has_next %}
+        <a class="btn btn-success" href="?page={{page_obj.next_page_number}}">Siguiente</a>
+        {%endif%}
+    </ul>
 
 {% endblock content%}

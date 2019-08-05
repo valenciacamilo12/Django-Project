@@ -18,6 +18,8 @@ from django.conf.urls import url, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
+from django.contrib.auth.views import login, password_reset, password_reset_done,password_reset_confirm, password_reset_complete, logout_then_login
+
 
 
 
@@ -27,8 +29,9 @@ urlpatterns = [
     url(r'^oficinas/', include('apps.oficinas.urls', namespace='oficinas')),
     url(r'^empleado/', include('apps.empleados.urls', namespace='empleados')),
     url(r'^clientes/', include('apps.clientes.urls', namespace='clientes')),
-    url(r'^login/$', auth_views.login, name='login'),
-    url(r'^logout/$', auth_views.logout, name='logout'),
+    url(r'^$', login, {'template_name': 'index.html'}, name='login'),
+    url(r'^accounts/login/', login, {'template_name': 'index.html'}, name='login'),
+    url(r'^logout/', logout_then_login, name='logout'),
 ]
 
 if settings.DEBUG:

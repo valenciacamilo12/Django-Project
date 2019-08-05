@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+from django.core.urlresolvers import reverse_lazy
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,6 +27,12 @@ SECRET_KEY = 'xr*^3%no0z+#ni39r6q6v_nfbmj@h72$m=kgay=tw8*pkp3(a9'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'oscarpruebadjango@gmail.com'
+EMAIL_HOST_PASSWORD = 'pr0b@rdj@ng0'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
 # Application definition
@@ -37,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
     'apps.oficinas',
     'apps.clientes',
     'apps.empleados',
@@ -54,6 +62,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'tiendasenasoft.urls'
+LOGIN_REDIRECT_URL = reverse_lazy('productos:producto_listar')
+LOGOUT_REDIRECT_URL = reverse_lazy('login')
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 TEMPLATES = [
     {

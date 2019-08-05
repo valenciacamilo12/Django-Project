@@ -8,7 +8,7 @@ from apps.productos.forms import ProductoForm,GamaProductoForm
 class ProductoCreate(CreateView):
     model = Producto
     form_class = ProductoForm
-    template_name = 'producto/cliente_form.html'
+    template_name = 'producto/producto_form.html'
     success_url = reverse_lazy('productos:producto_listar')
 
 
@@ -16,20 +16,21 @@ class ProductoCreate(CreateView):
 class ProductoUpdate(UpdateView):
     model = Producto
     form_class = ProductoForm
-    template_name = 'producto/cliente_form.html'
+    template_name = 'producto/producto_form.html'
     success_url = reverse_lazy('productos:producto_listar')
 
 
 class ProductoDelete(DeleteView):
     model = Producto
     form_class = ProductoForm
-    template_name = 'producto/cliente_delete.html'
+    template_name = 'producto/producto_delete.html'
     success_url = reverse_lazy('productos:producto_listar')
 
 
 class ProductoList(ListView):
     model = Producto
-    template_name = 'producto/cliente_list.html'
+    template_name = 'producto/producto_list.html'
+    paginate_by = 5
 
 
 #---------------GamaProduct--------------------
