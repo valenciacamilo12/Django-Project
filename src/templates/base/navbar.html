@@ -14,17 +14,27 @@
         <a class="nav-link" href="{%url 'productos:producto_listar'%}">Productos</a>
       </li>
 
-
       {% if perms.producto.is_uno %}
         <li class="nav-item">
-            <a class="nav-link" href="{%url 'productos:producto_crear'%}">Crear Productos</a>
+            <a class="nav-link" href="{%url 'empleados:empleado_listar'%}">Empleados</a>
         </li>
       {%endif%}
 
       {% if perms.producto.is_uno %}
         <li class="nav-item">
+            <a class="nav-link" href="{%url 'oficinas:oficina_listar'%}">Oficinas</a>
+        </li>
+      {%endif%}
+
+
+      {% if perms.producto.is_uno %}
+        <li class="nav-item">
           <a class="nav-link" href="{%url 'logout'%}">Salir</a>
         </li>
+      {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{%url 'logout'%}">Salir</a>
+       </li>
       {% endif %}
     </ul>
     <form class="form-inline my-2 my-lg-0">

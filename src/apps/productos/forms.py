@@ -6,7 +6,6 @@ class ProductoForm(forms.ModelForm):
         model = Producto
 
         fields = [
-            'codigo_producto',
             'nombre',
             'dimensiones',
             'proveedor',
@@ -19,7 +18,6 @@ class ProductoForm(forms.ModelForm):
 
 
         labels = {
-            'codigo_producto':'Codigo Producto',
             'nombre':'Nombre',
             'dimensiones':'Dimensiones',
             'proveedor':'Proveedor',
@@ -32,7 +30,6 @@ class ProductoForm(forms.ModelForm):
 
 
         widgets = {
-            'codigo_producto': forms.TextInput(attrs = {'class':'forms-control'}),
             'nombre': forms.TextInput(attrs = {'class':'form-control'}),
             'dimensiones': forms.TextInput(attrs = {'class':'form-control'}),
             'proveedor': forms.TextInput(attrs = {'class':'form-control'}),

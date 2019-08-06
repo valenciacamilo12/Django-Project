@@ -6,7 +6,6 @@ class ClienteForm(forms.ModelForm):
         model = Cliente
 
         fields = [
-            'codigo_cliente',
             'nombre_cliente',
             'nombre_contacto',
             'apellido_contacto',
@@ -17,8 +16,6 @@ class ClienteForm(forms.ModelForm):
             'ciudad',
             'region',
             'pais',
-            'usuario',
-            'password',
             'codigo_postal',
             'limite_credito',
             'empleado',
@@ -26,7 +23,6 @@ class ClienteForm(forms.ModelForm):
         ]
 
         labels = {
-            'codigo_cliente':'Codigo Cliente',
             'nombre_cliente':'Nombre Cliente',
             'nombre_contacto':'Nombre Contacto',
             'apellido_contacto':'Apellido Contacto',
@@ -37,8 +33,6 @@ class ClienteForm(forms.ModelForm):
             'ciudad':'Ciudad',
             'region':'Region',
             'pais':'Pais',
-            'usuario':'Usuario',
-            'password':'Password',
             'codigo_postal':'Codigo Postal',
             'limite_credito':'limite_credito',
             'empleado':'empleado',
@@ -46,7 +40,6 @@ class ClienteForm(forms.ModelForm):
 
 
         widgets = {
-            'codigo_cliente': forms.TextInput(attrs={'class':'form-control'}),
             'nombre_cliente': forms.TextInput(attrs={'class':'form-control'}),
             'nombre_contacto': forms.TextInput(attrs={'class':'form-control'}),
             'apellido_contacto': forms.TextInput(attrs={'class':'form-control'}),
@@ -57,8 +50,6 @@ class ClienteForm(forms.ModelForm):
             'ciudad': forms.TextInput(attrs={'class':'form-control'}),
             'region': forms.TextInput(attrs={'class':'form-control'}),
             'pais': forms.TextInput(attrs={'class':'form-control'}),
-            'usuario': forms.TextInput(attrs={'class':'form-control'}),
-            'password': forms.PasswordInput(attrs={'class':'form-control'}),
             'codigo_postal': forms.TextInput(attrs={'class':'form-control'}),
             'limite_credito': forms.TextInput(attrs={'class':'form-control'}),
             'empleado': forms.Select(attrs={'class':'form-control'}),

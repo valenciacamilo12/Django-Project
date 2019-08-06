@@ -13,7 +13,7 @@
                 <th scope='col'> Cantidad Stock</th>
                 <th scope='col'> Precio Venta</th>
                 <th scope='col'> Precio Proveedor</th>
-                <th scope='col'>Gama Producto</th>
+                <th scope='col'>GamaProducto</th>
             </tr>
         </thead>
         <tbody>
@@ -31,6 +31,10 @@
                         <td>{{producto.precio_venta}}</td>
                         <td>{{producto.precio_proveedor}}</td>
                         <td>{{producto.gama_producto}}</td>
+                        <td>
+                            <a class="btn btn-primary" href="{% url 'clientes:cliente_crear'%}">Comprar</a>
+                        </td>
+
                         {%if perms.producto.is_uno %}
                             <td>
                                 <a class="btn btn-primary" href="{% url 'productos:producto_editar' producto.codigo_producto %}">Editar</a>
