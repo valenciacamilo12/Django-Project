@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^oficinas/', include('apps.oficinas.urls', namespace='oficinas')),
     url(r'^empleado/', include('apps.empleados.urls', namespace='empleados')),
     url(r'^clientes/', include('apps.clientes.urls', namespace='clientes')),
+    url(r'^registro/', include('apps.registro.urls', namespace='registro')),
     url(r'^$', login, {'template_name': 'index.html'}, name='login'),
     url(r'^accounts/login/', login, {'template_name': 'index.html'}, name='login'),
     url(r'^logout/', logout_then_login, name='logout'),
