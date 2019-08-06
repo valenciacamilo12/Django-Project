@@ -13,14 +13,17 @@
                 </div>
 
                 <div class="form-group">
-                    <label for ="username">Contraseña</label>
+                    <label for ="password">Contraseña</label>
                     <input class="form-control" type="password" name="password">
                 </div>
 
                 <div class="form-group">
-                    <a href="#">Olvide mi contraseña</a>
+                    <a href="{%url 'password_reset'%}">Olvide mi contraseña</a>
                     <input class="btn btn-primary" type="submit" value="ingresar">
                 </div>
+                <a href="{%url 'clientes:cliente_crear'%}">No tengo cuenta</a>
+
+
 
             </div>
         </div>

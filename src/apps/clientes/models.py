@@ -13,6 +13,8 @@ class Cliente(models.Model):
     ciudad = models.CharField(max_length=30)
     region = models.CharField(max_length=30)
     pais = models.CharField(max_length=30)
+    usuario = models.CharField(max_length=30,default=True)
+    password = models.CharField(max_length=30,default=True)
     codigo_postal = models.CharField(max_length=30, default=True)
     limite_credito = models.CharField(max_length=30, default=True)
     empleado = models.ForeignKey(Empleado, on_delete=models.CASCADE, null=True, blank=True)
