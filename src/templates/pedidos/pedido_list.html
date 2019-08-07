@@ -1,0 +1,42 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope='col'>Codigo Pedido</th>
+        <th scope='col'>Fecha Pedido</th>
+        <th scope='col'>Fecha Esperada</th>
+        <th scope='col'>Fecha Entrega</th>
+        <th scope='col'>Estado</th>
+        <th scope='col'>Comentarios</th>
+        <th scope='col'>Codigo Cliente</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% if object_list %}
+        {% for pedido in object_list %}
+        <tr class="table-light">
+          <th scope='row'>{{pedido.codigo_pedido}}</th>
+          <td>{{pedido.fecha_pedido}}</td>
+          <td>{{pedido.fecha_esparada}}</td>
+          <td>{{pedido.fecha_entrega}}</td>
+          <td>{{pedido.estado}}</td>
+          <td>{{pedido.comentarios}}</td>
+          <td>{{pedido.codigo_cliente}}</td>
+          <td>
+            {%if perms.pedido.is_uno%}
+              <a class="btn btn-primary" href="#">Editar</a>
+              <a class="btn btn-danger" href="#">Eliminar</a>
+              <a class="btn btn-info" href="#">Generar Reporte</a>
+            {%endif%}
+          </td>
+        </tr>
+        {% endfor %}
+      {% else %}
+        <h1>No hay pedidos Registrados</h1>
+      {% endif %}
+    </tbody>
+  </table>
+
+{% endblock content %}

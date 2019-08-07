@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.views.generic import CreateView,UpdateView,ListView,DeleteView
 from django.core.urlresolvers import reverse_lazy
-from apps.productos.models import Producto,GamaProductos
-from apps.productos.forms import ProductoForm,GamaProductoForm
+from apps.productos.models import Producto,GamaProductos,Pedidos
+from apps.productos.forms import ProductoForm,GamaProductoForm,PedidoForm
 
 
 class ProductoCreate(CreateView):
@@ -61,3 +61,35 @@ class GamaProductoDelete(DeleteView):
 class GamaProductoList(ListView):
     model = GamaProductos
     template_name = 'producto/gamaproducto_list.html'
+
+
+
+#Crear Pedidos
+
+
+class PedidoCreate(CreateView):
+    model = Pedidos
+    form_class = PedidoForm
+    template_name = 'pedidos/pedido_form.html'
+    success_url = reverse_lazy('productos:pedido_listar')
+
+
+
+class PedidoUpdate(UpdateView):
+    model = Pedidos
+    form_class = PedidoForm
+    template_name = 'pedidos/pedido_form.html'
+    success_url = reverse_lazy('productos:pedido_listar')
+
+
+class PedidoDelete(DeleteView):
+    model = Pedidos
+    form_class = PedidoForm
+    template_name = 'pedidos/pedido_delete.html'
+    success_url = reverse_lazy('productos:pedido_listar')
+
+
+
+class PedidoList(ListView):
+    model = Pedidos
+    template_name = 'pedidos/pedido_list.html'

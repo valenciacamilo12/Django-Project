@@ -1,0 +1,9 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+    <form method = "post">{% csrf_token%}
+            <h3> Desea eliminar el pedido {{object.codigo_pedido}?</h3>
+            <button type="submit" class="btn btn-danger"> Si, eliminar</button>
+            <a href="#" class="btn btn-success">Cancelar</a>
+    </form>
+{% endblock content %}

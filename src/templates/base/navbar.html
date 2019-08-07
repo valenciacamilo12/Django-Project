@@ -26,6 +26,12 @@
         </li>
       {%endif%}
 
+      {% if perms.producto.is_uno %}
+        <li class="nav-item">
+            <a class="nav-link" href="{%url 'productos:pedido_listar'%}">Pedidos</a>
+        </li>
+      {%endif%}
+
 
       {% if perms.producto.is_uno %}
         <li class="nav-item">

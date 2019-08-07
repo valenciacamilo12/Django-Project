@@ -31,10 +31,6 @@
                         <td>{{producto.precio_venta}}</td>
                         <td>{{producto.precio_proveedor}}</td>
                         <td>{{producto.gama_producto}}</td>
-                        <td>
-                            <a class="btn btn-primary" href="{% url 'clientes:cliente_crear'%}">Comprar</a>
-                        </td>
-
                         {%if perms.producto.is_uno %}
                             <td>
                                 <a class="btn btn-primary" href="{% url 'productos:producto_editar' producto.codigo_producto %}">Editar</a>
@@ -42,6 +38,8 @@
                             <td>
                                 <a class="btn btn-danger" href="{% url 'productos:producto_eliminar' producto.codigo_producto%}">Eliminar</a>
                             </td>
+
+
                         {% endif %}
                     </tr>
                 {% endfor %}
@@ -50,16 +48,5 @@
             {%endif %}
         </tbody>
     </table>
-    <ul class = "pager">
-    {%if page_obj.has_previous %}
-      <a class="btn btn-success" href="?page={{page_obj.previous_page_number}}">Previo</a>
-    {%endif%}
-    </ul>
-
-    <ul class = "pager">
-        {%if page_obj.has_next %}
-        <a class="btn btn-success" href="?page={{page_obj.next_page_number}}">Siguiente</a>
-        {%endif%}
-    </ul>
-
+    <a class="btn btn-info" href="{% url 'productos:producto_crear'%}">Nuevo</a>
 {% endblock content%}

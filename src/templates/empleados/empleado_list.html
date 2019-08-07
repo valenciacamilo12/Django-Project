@@ -30,7 +30,6 @@
                         <td>{{empleado.puesto}}</td>
                         <td>{{empleado.oficina}}</td>
                         <td>
-                            <a class="btn btn-success" href="{% url 'empleados:empleado_crear' %}">Nuevo</a>
                             <a class="btn btn-primary" href="{% url 'empleados:empleado_editar' empleado.codigo_empleado %}">Editar</a>
                             <a class="btn btn-danger" href="{% url 'empleados:empleado_eliminar' empleado.codigo_empleado %}">Eliminar</a>
                         </td>
@@ -41,5 +40,5 @@
             {%endif %}
         </tbody>
     </table>
-
+    <a class="btn btn-success" href="{% url 'empleados:empleado_crear' %}">Nuevo</a>
 {% endblock content%}

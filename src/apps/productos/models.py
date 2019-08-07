@@ -35,16 +35,17 @@ class Producto(models.Model):
 
 
 class Pedidos(models.Model):
-    codigo_pedido = models.IntegerField(primary_key=True,unique=True)
-    fecha_pedido = models.DateField()
-    fecha_esparada = models.DateField()
-    fecha_entrega = models.DateField()
-    estado = models.CharField(max_length=40)
+    codigo_pedido = models.AutoField(primary_key=True,unique=True)
+    fecha_pedido = models.CharField(max_length = 10)
+    fecha_esparada = models.CharField(max_length = 10)
+    fecha_entrega = models.CharField(max_length = 10)
+    estado = models.CharField(max_length = 10)
     comentarios = models.CharField(max_length=60)
     codigo_cliente = models.ForeignKey(Cliente, null = True, on_delete= models.CASCADE, blank = True)
 
     def __str__(self):
         return '{}'.format(self.fecha_pedido)
+
 
 
 class Pagos(models.Model):
