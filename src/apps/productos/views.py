@@ -30,7 +30,7 @@ class ProductoDelete(DeleteView):
 class ProductoList(ListView):
     model = Producto
     template_name = 'producto/producto_list.html'
-    paginate_by = 5
+    paginate_by = 10
 
 
 #---------------GamaProduct--------------------
@@ -71,7 +71,7 @@ class PedidoCreate(CreateView):
     model = Pedidos
     form_class = PedidoForm
     template_name = 'pedidos/pedido_form.html'
-    success_url = reverse_lazy('productos:pedido_listar')
+    success_url = reverse_lazy('productos:pedido_comprar')
 
 
 
@@ -88,6 +88,11 @@ class PedidoDelete(DeleteView):
     template_name = 'pedidos/pedido_delete.html'
     success_url = reverse_lazy('productos:pedido_listar')
 
+
+
+class PedidoSucces(ListView):
+    model = Pedidos
+    template_name = 'pedidos/pedido_success.html'
 
 
 class PedidoList(ListView):

@@ -5,11 +5,14 @@ from apps.clientes.models import Cliente
 from apps.clientes.forms import ClienteForm
 from django.core.urlresolvers import reverse_lazy
 
+
 class ClienteCreate(CreateView):
     model = User
     template_name = 'clientes/cliente_form.html'
     form_class = ClienteForm
-    success_url = reverse_lazy('productos:producto_listar')
+    success_url = reverse_lazy('productos:pedido_crear')
+    cliente = Cliente.objects.all()
+
 
 
 class ClienteUpdate(UpdateView):

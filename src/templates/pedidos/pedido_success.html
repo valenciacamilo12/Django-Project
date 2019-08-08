@@ -1,0 +1,8 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+    <form method = "post">{% csrf_token%}
+            <h3> Gracias Por Comprar El Producto</h3>
+        <a href="{%url 'productos:producto_listar'%}" class="btn btn-success">Volver</a>
+    </form>
+{% endblock content %}

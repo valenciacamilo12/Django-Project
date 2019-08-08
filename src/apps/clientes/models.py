@@ -1,5 +1,6 @@
 from django.db import models
 from apps.empleados.models import Empleado
+from django.utils.translation import ugettext as _
 
 class Cliente(models.Model):
     codigo_cliente = models.AutoField(primary_key=True,unique=True)
@@ -19,3 +20,9 @@ class Cliente(models.Model):
 
     def __str__(self):
         return '{}'.format(self.nombre_cliente)
+
+    class Meta:
+        permissions = {
+            ('is_uno', _('Usuario Uno')),
+            ('is_dos', _('Usuario Dos')),
+        }

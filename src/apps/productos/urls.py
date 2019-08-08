@@ -1,5 +1,5 @@
 from apps.productos.views import ProductoCreate,ProductoUpdate,ProductoDelete,ProductoList,GamaProductoCreate,GamaProductoUpdate,GamaProductoDelete,GamaProductoList
-from apps.productos.views import PedidoCreate,PedidoUpdate,PedidoDelete,PedidoList
+from apps.productos.views import PedidoCreate,PedidoUpdate,PedidoDelete,PedidoList,PedidoSucces
 from django.conf.urls import url
 from django.contrib.auth.decorators import login_required
 
@@ -14,6 +14,7 @@ urlpatterns = [
     url(r'^gama/eliminar/(?P<pk>[\d]+)/$', login_required(GamaProductoDelete.as_view()), name = 'productogama_eliminar'),
     url(r'^pedido/nuevo$', login_required(PedidoCreate.as_view()), name = 'pedido_crear'),
     url(r'^pedido/listar$', login_required(PedidoList.as_view()), name = 'pedido_listar'),
+    url(r'^pedido/comprar$', login_required(PedidoSucces.as_view()), name = 'pedido_comprar'),
     url(r'^pedido/editar/(?P<pk>[\d]+)/$', login_required(PedidoUpdate.as_view()), name = 'pedido_editar'),
     url(r'^pedido/eliminar/(?P<pk>[\d]+)/$', login_required(PedidoDelete.as_view()), name = 'pedido_eliminar'),
 ]
